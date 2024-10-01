@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.ProfileSettingsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/default_avatar" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#142272"
+                android:textSize="17sp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/username1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:autofillHints="name"
+                android:fontFamily="@font/nunito_bold"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#142272"
+                android:textSize="17sp"
+                android:visibility="gone"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_bg2"
+                android:text="@string/sign_in"
+                android:textColor="#eee"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/userNameSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_bg2"
+                android:text="@string/save"
+                android:textColor="#eee"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/profile_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <RelativeLayout
+                android:id="@+id/myaccount"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="?attr/selectableItemBackground">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_single_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#142272"
+                    android:backgroundTintMode="add"
+                    android:src="@drawable/detail" />
+
+                <TextView
+                    android:id="@+id/guser_single_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_single_image"
+                    android:fontFamily="@font/nunito_semibold"
+
+                    android:text="@string/billing_details"
+                    android:textColor="#142272"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/myphone"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="?attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_phone_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#142272"
+                    android:backgroundTintMode="add"
+                    android:src="@drawable/phonecall" />
+
+                <TextView
+                    android:id="@+id/guser_phone_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_phone_image"
+                    android:fontFamily="@font/nunito_semibold"
+
+                    android:text="@string/phone"
+                    android:textColor="#142272"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/guser_phone_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_phone_image"
+                    android:autofillHints="phone"
+
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="phone"
+                    android:hint="@string/phone"
+                    android:textColor="#142272"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/myaddress"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="?attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_address_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#142272"
+                    android:backgroundTintMode="add"
+                    android:src="@drawable/address" />
+
+                <TextView
+                    android:id="@+id/guser_address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_address_image"
+                    android:fontFamily="@font/nunito_semibold"
+
+                    android:text="@string/address"
+                    android:textColor="#142272"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/guser_address_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_address_image"
+                    android:autofillHints="postalAddress"
+
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="textPostalAddress"
+                    android:hint="@string/address"
+                    android:textColor="#142272"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mycity"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="?attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_city_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#142272"
+                    android:backgroundTintMode="add"
+                    android:src="@drawable/cityscape" />
+
+                <TextView
+                    android:id="@+id/guser_city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_city_image"
+                    android:fontFamily="@font/nunito_semibold"
+
+                    android:text="@string/city"
+                    android:textColor="#142272"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/guser_city_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_city_image"
+                    android:autofillHints="postalAddress"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:inputType="textPostalAddress"
+                    android:hint="@string/city"
+                    android:textColor="#142272"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mystate"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="?attr/selectableItemBackground"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_state_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#142272"
+                    android:backgroundTintMode="add"
+                    android:src="@drawable/map" />
+
+                <TextView
+                    android:id="@+id/guser_state_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_state_image"
+                    android:fontFamily="@font/nunito_semibold"
+
+                    android:text="@string/state"
+                    android:textColor="#142272"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/guser_state_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_state_image"
+                    android:autofillHints="postalAddress"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/state"
+                    android:inputType="textPostalAddress"
+                    android:textColor="#142272"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/myzipcode"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="?attr/selectableItemBackground"
+                android:visibility="gone"
+                android:layout_gravity="bottom"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_zipcode_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="#142272"
+                    android:backgroundTintMode="add"
+                    android:src="@drawable/mail" />
+
+                <TextView
+                    android:id="@+id/guser_zipcode_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_zipcode_image"
+                    android:fontFamily="@font/nunito_semibold"
+
+                    android:text="@string/zipcode"
+                    android:textColor="#142272"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/guser_zipcode_name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_zipcode_image"
+                    android:autofillHints="postalCode"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:hint="@string/zipcode"
+                    android:inputType="text"
+                    android:textColor="#142272"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor"
+                    android:layout_alignParentBottom="true"
+                    />
+
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/userBillingSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/button_bg2"
+                android:text="@string/save"
+                android:textColor="#eee"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="?attr/selectableItemBackground">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/guser_single_image2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/logout3" />
+
+                <TextView
+                    android:id="@+id/guser_single_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/guser_single_image2"
+                    android:fontFamily="@font/nunito_semibold"
+
+                    android:text="@string/logout"
+                    android:textColor="#142272"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
